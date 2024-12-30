@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Link Manager</title>
+    <link rel="stylesheet" href="popup.css"> <!-- Link to the stylesheet -->
+</head>
+<body>
+    <!-- Main container for the popup -->
+    <div class="container">
+        <!-- Logo -->
+        <img src="logo.png" alt="Logo" class="logo">
+
+        <!-- Title -->
+        <h1>Job Link Manager</h1>
+
+        <!-- Form to add a new job -->
+        <form id="jobForm">
+            <div class="form-group">
+                <label for="link">Job Link:</label>
+                <input type="text" id="link" name="link" placeholder="Enter job link" required>
+            </div>
+            <div class="form-group">
+                <label for="skills">Required Skills (comma-separated):</label>
+                <input type="text" id="skills" name="skills" placeholder="e.g., Python, JavaScript, SQL" required>
+            </div>
+            <button type="submit">Add Job</button>
+        </form>
+
+        <!-- List of added jobs -->
+        <div id="jobList">
+            <h2>Added Jobs</h2>
+            <ul id="jobs"></ul>
+        </div>
+
+        <!-- Buttons for clearing jobs and sending them to users -->
+        <button id="clearJobs">Clear All Jobs</button>
+        <button id="sendJobs">Send Jobs to Users</button>
+
+        <!-- Message area for displaying feedback -->
+        <div id="message"></div>
+    </div>
+
+    <!-- Confirmation dialog overlay -->
+    <div id="confirmationDialog" class="dialog-overlay">
+        <div class="dialog-content">
+            <h2>Confirm Action</h2>
+            <p>Are you sure you want to send these jobs?</p>
+            <button id="confirmYes">Yes</button>
+            <button id="confirmNo">No</button>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="popup.js"></script>
+</body>
+</html>
